@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'SST';
+    src: url('../fonts/SST\ Arabic\ Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SST';
+    src: url('../fonts/SST\ Arabic\ Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SST";
+}
+
+body {
+    background: linear-gradient(90deg, #574899 0%, #1D1833 100%);
+}
+
+.backgroundLogo {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 375px;
+    opacity: 0.2;
+    z-index: -5;
+}
+
+.about {
+    margin-bottom: 70px;
+    width: 100%;
+}
+
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.aboutUs h1 {
+    text-align: center;
+    color: white;
+    font-size: 39px;
+    font-weight: bold;
+}
+
+.aboutUs .cards {
+    display: flex;
+    max-width: 960px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    margin: 58px auto 0;
+}
+
+.aboutUs .card {
+    height: 245px;
+    width: 260px;
+    background-color: white;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4F3F95;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+.aboutUs .card:hover {
+    transform: scale(1.04);
+}
+
+.achievements {
+    max-width: 550px;
+    margin-top: 50px;
+    border-radius: 18px;
+    background: #2D254E;
+    position: relative;
+    padding: 25px;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 54px 40px;
+    justify-content: center;
+}
+
+.achievements::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 18px;
+    border: 3px solid #ddd;
+    filter: blur(4px);
+    pointer-events: none;
+}
+
+.field {
+    display: flex;
+    color: white;
+    font-weight: bold;
+}
+
+.x {
+    grid-column: span 2;
+    margin: 0 auto;
+}
+
+.field p {
+    font-size: 22px;
+}
+
+.field a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+    border-bottom: 1px solid white;
+    font-weight: normal;
+}
+
+.field a:hover {
+    color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+.field .image {
+    width: 75px;
+    margin-left: 4px;
+}
+
+.field img {
+    width: 100%;
+}
+
+.achievements .logo {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 90px;
+}
+
+.structure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.structure .image {
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.structure img {
+    width: 100%;
+}
+
+@media (max-width: 840px) {
+    .aboutUs {
+        padding: 50px;
+    }
+    .aboutUs .cards {
+        flex-direction: column-reverse;
+        align-items: center; 
+        text-align: center;
+
+    }
+    .aboutUs .card {
+        width: 230px;
+        position: relative;
+    }
+    .aboutUs .card::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+        border-radius: 18px;
+        border: 2px solid black;
+    }
+    .aboutUs h1 {font-size: 32px;}
+    .backgroundLogo {top: 50%;}
+
+    .achievements {gap: 20px 25px;}
+    .achievements .logo {width: 50px;}
+    .field .image {width: 30px;}
+    .field .text {line-height: 10px;}
+    .field p {font-size: 10px;}
+    .field a {font-size: 6px;}
+
+}  
