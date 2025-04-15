@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SST";
+}
+
+@font-face {
+  font-family: "SST";
+  src: url("../fonts/SST Arabic Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SST";
+  src: url("../fonts/SST Arabic Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.star-member {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  width: 100%;
+  max-width: 960px;
+  margin: 58px auto 0;
+  justify-items: center;
+}
+
+.star-member > :first-child {
+  grid-column: 1 / -1; /* ياخذ الصف كامل */
+  justify-self: center; /* يتوسّط */
+}
+
+/* Responsive: شاشة أقل من 768px (تابلت وجوال) */
+@media (max-width: 768px) {
+  .star-member {
+    grid-template-columns: 1fr; /* عنصر واحد في كل صف */
+  }
+
+  .star-member > :first-child {
+    grid-column: auto; /* يرجع ياخذ خانة وحدة */
+  }
+}
+
+
+.star-member-card {
+  position: relative;
+  background-color: white;
+  width: 323px;
+  height: 90px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.star-member-card p {
+  text-align: center;
+  font-family: "SST";
+  font-style: normal;
+  font-weight: 300px;
+  font-size: 36px;
+  line-height: 32px;
+
+  color: black;
+}
+
+.star-member-card .rank {
+  border-radius: 100%;
+  width: 90px;
+  height: 90px;
+  left: 793px;
+  top: 171px;
+
+  border: 5px solid #574899;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  color: #4f3f95;
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  background: #4f3f95;
+  border-top: 1px solid #ffffff;
+  border-radius: 15px 15px 0px 0px;
+
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 32px;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  display: block;
+}
+
+footer img {
+  width: 44px;
+}
+
+footer a img {
+  width: 20px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  footer img {
+    width: 40px;
+  }
+
+  footer a img {
+    width: 24px;
+  }
+
+  footer p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
