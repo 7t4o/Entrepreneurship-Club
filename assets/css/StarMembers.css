@@ -5,6 +5,10 @@
   font-family: "SST";
 }
 
+body {
+  background: linear-gradient(90deg, #574899 0%, #1d1833 100%);
+  
+}
 @font-face {
   font-family: "SST";
   src: url("../fonts/SST Arabic Light.ttf") format("truetype");
@@ -44,7 +48,6 @@
     grid-column: auto; /* يرجع ياخذ خانة وحدة */
   }
 }
-
 
 .star-member-card {
   position: relative;
@@ -88,7 +91,7 @@
 }
 
 footer {
-  position: absolute;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -142,5 +145,181 @@ footer a img {
   footer p {
     font-size: 14px;
     line-height: 1.4;
+  }
+}
+
+/* تنسيق الكاروسيل */
+.carousel-container {
+  position: relative;
+  max-width: 75%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: 5vh;
+}
+
+/* تعديل track للكاروسيل */
+.carousel-track {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  gap:0 5rem; /* المسافة بين الكاردات */
+  padding-bottom: 1rem;
+}
+
+/* تنسيق البطاقة داخل الكاروسيل */
+.card {
+  position: relative;
+  min-width: calc(33.33% + 1rem); /* العرض الآن يعرض 3.5 بطاقات */
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem 1rem;
+  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* تنسيق صورة البطاقة */
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #f4f4f4;
+}
+
+/* عند الشاشات الصغيرة، يتم عرض 3 بطاقات فقط */
+@media (max-width: 768px) {
+  .card {
+    min-width: calc(50% + 1rem); /* عرض 2 بطاقة ونصف */
+  }
+  .carousel-track {
+    gap:0 0.5rem; /* المسافة بين الكاردات */
+  }
+}
+
+/* عند الشاشات الصغيرة جدًا، سيكون هناك بطاقة واحدة فقط في العرض */
+@media (max-width: 480px) {
+  .card {
+    min-width: 100%; /* يعرض بطاقة واحدة في العرض */
+  }
+  .carousel-track {
+    gap:0 0.5rem; /* المسافة بين الكاردات */
+  }
+}
+
+
+
+.card h3 {
+  /* margin-top: 3rem; المسافة تحت الصورة */
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 0.2rem;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.card .label {
+  font-size: 0.8rem;
+  color: #999;
+  margin: 0.5rem 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.socials a {
+  color: #444;
+  font-size: 1.2rem;
+  background: #eee;
+  padding: 0.5rem 0.8rem;
+  border-radius: 1rem;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  background: #ddd;
+}
+
+/* تصميم الأزرار في الأسفل */
+.carousel-controls {
+  display: flex;
+  justify-content: center; /* توسيط الأزرار أفقياً */
+  align-items: center; /* توسيط الأزرار عمودياً داخل الكاروسيل */
+  gap: 1rem; /* المسافة بين الأزرار */
+  margin-top: 1rem; /* المسافة فوق الأزرار */
+  width: 100%; /* ضمان أن الأزرار تأخذ كامل عرض الكاروسيل */
+}
+
+button.arrow {
+  background: #ddd;
+  border: none;
+  padding: 1rem; /* زيادة المسافة داخل الزر */
+  border-radius: 50%; /* لجعل الأزرار دائرية */
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 0; /* إزالة المسافة الافتراضية */
+}
+
+button.arrow:hover {
+  background: #bbb;
+}
+
+
+
+
+
+
+.backgroundLogo {
+  position: fixed;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 375px;
+  opacity: 0.2;
+  z-index: -5;
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.aboutUs h1 {
+  text-align: center;
+  color: white;
+  font-size: 39px;
+  font-weight: bold;
+}
+
+@media (max-width: 840px) {
+  .aboutUs {
+    padding: 50px;
+  }
+
+  .aboutUs h1 {
+    font-size: 32px;
+  }
+  .backgroundLogo {
+    top: 50%;
   }
 }

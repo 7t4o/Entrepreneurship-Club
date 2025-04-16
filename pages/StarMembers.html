@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/aboutUs.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/aboutUs.css" /> -->
     <link rel="stylesheet" href="../assets/css/StarMembers.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>نجوم النادي لهذا الشهر</title>
   </head>
   <body>
@@ -25,13 +32,23 @@
           <div class="rank">2</div>
         </div>
       </div>
+      
+      <div class="carousel-container">
+        <button class="arrow right" id="rightBtn">⟵</button>
+        <div class="carousel-track">
+          <!-- 
+            البيانات اللي هنا تيجي من ملف scripts\Carousel.js
+            -->
+        </div>
+        <button class="arrow left" id="leftBtn">⟶</button>
+      </div>
 
       <img class="backgroundLogo" src="../assets/images/Logo.png" />
     </div>
     <footer>
-      <img src="../assets/images/Icons/erbut.png" alt="">
-<p>©ALL RIGHTS RESERVED | @CLUBIECJU </p>
-      
+      <img src="../assets/images/Icons/erbut.png" alt="" />
+      <p>©ALL RIGHTS RESERVED | @CLUBIECJU</p>
+
       <a href="https://www.linkedin.com/in/ju-entrepreneurship-club-a07315340">
         <img src="../assets/images/Icons/w_linkedin.png" alt="" />
       </a>
@@ -45,5 +62,6 @@
         <img src="../assets/images/Icons/w_TikTok.png" alt="" />
       </a>
     </footer>
+    <script src="../scripts/Carousel.js"></script>
   </body>
 </html>
