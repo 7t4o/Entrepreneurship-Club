@@ -34,7 +34,6 @@ body {
 }
 
 .about {
-    margin-bottom: 70px;
     width: 100%;
 }
 
@@ -44,6 +43,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 30px;
+    padding-bottom: 0;
 }
 
 .aboutUs h1 {
@@ -161,6 +161,8 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 80px;
+    margin-bottom: 70px;
+
 }
 
 .structure .image {
@@ -172,9 +174,38 @@ body {
     width: 100%;
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 0 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    background: #4f3f95;
+    border-top: 1px solid #ffffff;
+    border-radius: 15px 15px 0px 0px;
+
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 32px;
+    color: white;
+    text-align: center;
+}
+
+footer a {display: block;}
+
+footer img {width: 44px;}
+
+footer a img {width: 20px;}
+
 @media (max-width: 840px) {
     .aboutUs {
         padding: 50px;
+        padding-bottom: 0;
     }
     .aboutUs .cards {
         flex-direction: column-reverse;
@@ -206,4 +237,16 @@ body {
     .field p {font-size: 10px;}
     .field a {font-size: 6px;}
 
+    footer {
+        flex-direction: column;
+        position: relative;
+        gap: 10px;
+        padding: 20px;
+        margin: 0;
+    }
+    footer img {width: 40px;}
+    footer a img {width: 24px;}
+    footer p {
+        font-size: 14px;
+        line-height: 1.4;}
 }  
