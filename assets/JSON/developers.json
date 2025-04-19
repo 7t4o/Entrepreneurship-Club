@@ -4,6 +4,55 @@
     "Role": "مطور مواقع",
     "github": "https://github.com/M7MDdev1",
     "Linkedin": "https://www.linkedin.com/in/mohammed-mohjri/",
-    "X": "https://x.com/m7md_dev1"
+    "X": "https://x.com/m7md_dev1",
+    "Image":"../assets/images/Contributers/M7MD.jpg"
+  },
+  {
+    "Name": "حاتم شويعي",
+    "Role": "مطور مواقع",
+    "github": "https://github.com/7t4o",
+    "Linkedin": "https://www.linkedin.com/in/%D8%AD%D8%A7%D8%AA%D9%85-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86-b453142a4",
+    "X": "https://x.com/7t_4o",
+    "Image":"../assets/images/Contributers/Hatem.jpg"
+  },
+  {
+    "Name": "حسين نمازي",
+    "Role": "مدير مشروع",
+    "github": "https://github.com/HussainEN/",
+    "Linkedin": "https://www.linkedin.com/in/hussain-namazi-a07abb30b/",
+    "X": "https://x.com/HussainEN_dev",
+    "Image":"../assets/images/Contributers/Hussain.jpg"
+  },
+  {
+    "Name": "ياسر الشريف",
+    "Role": "UI/UX مصمم",
+    "github": "https://github.com/yasser15i",
+    "Linkedin": "https://www.linkedin.com/in/yasser-alshareef/",
+    "X": "https://X.com/yas15i",
+    "Image":"../assets/images/Contributers/Yasser.jpg"
+  },
+  {
+    "Name": "يوسف فقيهي",
+    "Role": "مطور مواقع",
+    "github": "https://github.com/YOUSEFFAQIHI",
+    "Linkedin": "https://www.linkedin.com/in/yousef-faqihi-51ab50265",
+    "X": "https://X.com/yo_52j",
+    "Image":"../assets/images/Contributers/Yousef.jpg"
+  },
+  {
+    "Name": "مؤيد الامين",
+    "Role": "UI/UX مصمم",
+    "github": "https://github.com/Moayad-Alamin",
+    "Linkedin": "https://www.linkedin.com/in/mohammed-mohjri/",
+    "X": "https://x.com/Moayadlll",
+    "Image":"../assets/images/Contributers/Moayad.jpg"
+  },
+  {
+    "Name": "عبدالباقي طه",
+    "Role": "UI/UX مصمم",
+    "github": "https://github.com/abdlgi918",
+    "Linkedin": "https://www.linkedin.com/in/%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D9%8A-%D8%B7%D9%87-abdalbagi-taha-baaa6329a/",
+    "X": "https://x.com/abdlgi918",
+    "Image":"../assets/images/Contributers/Abdulbaqi.png"
   }
 ]
