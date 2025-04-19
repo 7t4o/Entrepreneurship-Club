@@ -130,6 +130,7 @@ footer a img {
 @media (max-width: 600px) {
   footer {
     flex-direction: column;
+    position: relative;
     gap: 10px;
     padding: 20px;
   }
