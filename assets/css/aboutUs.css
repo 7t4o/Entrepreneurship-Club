@@ -65,23 +65,57 @@ body {
     margin: 58px auto 0;
 }
 
-.aboutUs .card {
+.flip-card {
     height: 245px;
     width: 260px;
-    background-color: white;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     border-radius: 18px;
+}
+
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.flip-card-front {
+    background: white;
     color: #4F3F95;
     font-size: 32px;
     font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease-out;
 }
 
-.aboutUs .card:hover {
-    transform: scale(1.04);
+.flip-card-back {
+    background: white;
+    color: #4F3F95;
+    transform: rotateY(180deg);
+    font-size: 12px;
+    text-align: right;
+    font-weight: bold;
+    padding: 15px;
 }
 
 .achievements {
@@ -91,7 +125,6 @@ body {
     background: #2D254E;
     position: relative;
     padding: 25px;
-    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);

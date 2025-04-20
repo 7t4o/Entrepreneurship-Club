@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'SST';
+    src: url('../fonts/SST\ Arabic\ Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SST';
+    src: url('../fonts/SST\ Arabic\ Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,150 +19,84 @@
     font-family: "SST";
 }
 
-@font-face {
-    font-family: 'SST';
-    src: url('../fonts/SST Arabic Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SST';
-    src: url('../fonts/SST Arabic Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-html {
+body {
     background: linear-gradient(90deg, #574899 0%, #1D1833 100%);
 }
 
-ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-}
-
 main {
-    background-image: url("../images/Main.jpg");
+    width: 100%;
+    height: clamp(220px, 62.7vw,627px);
+    background-image: url("../images/background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 627px;
     position: relative;
 }
 
-main div {
-    background: #00000066;
-    box-shadow: 0px 4px 200px 0px #00000040;
+main h1 {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.40);
+    box-shadow: 0px 4px 200px 0px rgba(0, 0, 0, 0.35);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-size: clamp(20px, 4.8vw, 48px);
+    color: white;
     text-align: center;
-    font-weight: 700;
-    color: #FFFFFF;
-    -webkit-text-stroke: 1px black;
-    font-size: 30px;
 }
 
-.share {
+main h2 {
+    height: clamp(33px, 10vw, 100px);
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: 36px;
-    padding: 1rem;
-    
-}
-
-.share a {
-    background-color: white;
-    color: black;
-    padding: 10px 15px;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 20px;
-    display: inline-flex;
+    padding: clamp(3px, 1.5vw, 22px) clamp(6px, 1.8vw,33px);
+    background: rgba(0, 0, 0, 0.60);   
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    margin-right: 2rem;
+    gap: 18px;
 }
 
-.share a img {
-    height: 35px;
+main h2 p {
+    color: white;
+    font-size: clamp(14px, 3.6vw, 36px);
 }
 
-.foot-text {
-    font-size: 40px;
+main h2 div {
+    height: clamp(20px, 5.5vw, 55px);
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(3px, 1vw, 10px) clamp(6px, 2.5vw,25px);
+    gap: clamp(10px, 1.5vw, 15px);
+}
+
+main h2 div img {
+    width: clamp(15px, 3.5vw, 35px);
+}
+
+main h2 div p {
+    font-size: clamp(14px, 2.4vw, 24px);
+    color: black;
+}
+
+section {
+    height: 300px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+section div {
+    margin-right: 18vw;
+    padding-top: 25px;
+    width: 660px;
+}
+
+section div p {
+    font-size: clamp(20px, 4vw, 40px);
+    color: white;
+    text-align: right;
     font-weight: bold;
-    margin-right: 5vw;
-    color: #FFFFFF;
-    -webkit-text-stroke: 1px #000000;
-    text-shadow: 0px 4px 4px 0px #00000040;
-}
-
-/* ✅ Responsive for tablets */
-@media (max-width: 1024px) {
-    main div {
-        font-size: 40px;
-    }
-
-    .share {
-        font-size: 28px;
-    }
-
-    .share a {
-        font-size: 20px;
-        padding: 8px 12px;
-    }
-
-    .share a img {
-        height: 30px;
-    }
-
-    .foot-text {
-        font-size: 32px;
-    }
-}
-
-/* ✅ Responsive for phones */
-@media (max-width: 600px) {
-    main div {
-        font-size: 28px;
-    }
-
-    .share {
-        font-size: 20px;
-        padding: 0.5rem;
-    }
-
-    .share a {
-        font-size: 16px;
-        padding: 6px 10px;
-    }
-
-    .share a img {
-        height: 25px;
-    }
-
-    .foot-text {
-        font-size: 24px;
-        margin-right: 2vw;
-        text-align: center;
-    }
-
-    ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    a {
-        font-size: 14px;
-    }
 }
