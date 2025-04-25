@@ -66,8 +66,8 @@ body {
 }
 
 .flip-card {
-    height: 245px;
-    width: 260px;
+    height: clamp(160px, 24.5vw, 245px);
+    width: clamp(150px, 26vw, 260px);
     perspective: 1000px;
     cursor: pointer;
 }
@@ -98,24 +98,26 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: clamp(9px, 2vw, 20px);
 }
 
 .flip-card-front {
     background: white;
     color: #4F3F95;
-    font-size: 32px;
+    font-size: clamp(24px, 3.2vw, 32px);
     font-weight: bold;
+    border: 1px solid black;
+    outline: 5px solid white;
 }
 
 .flip-card-back {
     background: white;
     color: #4F3F95;
     transform: rotateY(180deg);
-    font-size: 12px;
+    font-size: clamp(7px, 1.2vw, 12px);
     text-align: right;
     font-weight: bold;
-    padding: 15px;
+    padding: clamp(7px, 1.5vw, 15px);
 }
 
 .achievements {
