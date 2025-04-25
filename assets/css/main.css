@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'SST';
-    src: url('../fonts/SST\ Arabic\ Light.ttf') format('truetype');
+    font-family: 'SAUDI';
+    src: url('../fonts/SaudiWeb-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SST';
-    src: url('../fonts/SST\ Arabic\ Bold.ttf') format('truetype');
+    font-family: 'SAUDI';
+    src: url('../fonts/SaudiWeb-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
 }
@@ -16,7 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "SST";
+    font-family: "SAUDI";
 }
 
 body {
