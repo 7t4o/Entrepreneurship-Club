@@ -6,16 +6,20 @@ burgerMenu.addEventListener("click", function () {
 });
 
 // background animation for main page
-const imageBox = document.getElementById("imageBox");
-let currentIndex = 0;
-
-function changeBackground() {
-    setTimeout(() => {
-        currentIndex = (currentIndex + 1) % 6;
-        console.log(currentIndex)
-        imageBox.style.backgroundImage = `url("../assets/images/background/bg${currentIndex}.jpg")`;
-    }, 1000); 
+function lazyLoadBackground(el, newImageUrl) {
+    const img = new Image();
+    img.src = newImageUrl;
+    img.onload = () => {
+        el.style.backgroundImage = `url('${newImageUrl}')`;
+    };
 }
 
-imageBox.style.backgroundImage = `url("../assets/images/background/bg${currentIndex}.jpg")`;
-setInterval(changeBackground, 5000);
+const bgDiv = document.getElementById("imageBox");
+
+const images = ['../assets/images/background/bg0.jpg', '../assets/images/background/bg1.jpg', '../assets/images/background/bg2.jpg', '../assets/images/background/bg3.jpg', '../assets/images/background/bg4.jpg', '../assets/images/background/bg5.jpg'];
+let index = 0;
+
+setInterval(() => {
+    lazyLoadBackground(bgDiv, images[index]);
+    index = (index + 1) % images.length;
+}, 5000);
