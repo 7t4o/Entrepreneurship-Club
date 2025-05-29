@@ -66,8 +66,8 @@ body {
 }
 
 .flip-card {
-    height: clamp(160px, 24.5vw, 245px);
-    width: clamp(150px, 26vw, 260px);
+    height: clamp(190px, 24.5vw, 245px);
+    width: clamp(200px, 26vw, 260px);
     perspective: 1000px;
     cursor: pointer;
 }
@@ -114,8 +114,8 @@ body {
     background: white;
     color: #4F3F95;
     transform: rotateY(180deg);
-    font-size: clamp(7px, 1.2vw, 12px);
-    text-align: right;
+    font-size: clamp(12px, 1.2vw, 16px);
+    text-align: center;
     font-weight: bold;
     padding: clamp(7px, 1.5vw, 15px);
 }
